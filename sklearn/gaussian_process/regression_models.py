@@ -11,7 +11,8 @@ The built-in regression models submodule for the gaussian_process module.
 
 import numpy as np
 
-
+@deprecated("constant was deprecated in version 0.18 and will be "
+            "removed in 0.20.")
 def constant(x):
     """
     Zero order polynomial (constant, p = 1) regression model.
@@ -35,7 +36,8 @@ def constant(x):
     f = np.ones([n_eval, 1])
     return f
 
-
+@deprecated("linear was deprecated in version 0.18 and will be "
+            "removed in 0.20.")
 def linear(x):
     """
     First order polynomial (linear, p = n+1) regression model.
@@ -59,7 +61,8 @@ def linear(x):
     f = np.hstack([np.ones([n_eval, 1]), x])
     return f
 
-
+@deprecated("quadratic was deprecated in version 0.18 and will be "
+            "removed in 0.20.")
 def quadratic(x):
     """
     Second order polynomial (quadratic, p = n*(n-1)/2+n+1) regression model.
